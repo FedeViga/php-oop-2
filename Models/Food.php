@@ -12,7 +12,7 @@ class Food extends Product{
      * @param  string $_brand
      * @param  float $_price
      * @param  string $_image
-     * @param  string $_weight
+     * @param  int $_weight
      * @param  string $_taste
      */
     public function __construct(Category $_category, $_name, $_brand, $_price, $_image, $_weight, $_taste) {
