@@ -1,7 +1,9 @@
 <?php
 
 class Food extends Product{
-    public $weight;
+
+    use Weightable;
+    
     public $taste;
     public $quantity;
     

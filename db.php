@@ -2,6 +2,8 @@
 
 require './Models/Product.php';
 require './Models/Category.php';
+require './Models/Traits/Sizeable.php';
+require './Models/Traits/Weightable.php';
 require './Models/Food.php';
 require './Models/Game.php';
 require './Models/Kennel.php';
@@ -82,6 +84,7 @@ $kennels = [
         13.99,
         "https://m.media-amazon.com/images/I/81JIozADAPL._AC_SL1500_.jpg",
         "Tutte le taglie",
+        "2kg",
         "40cm"
     ),
     
@@ -92,6 +95,7 @@ $kennels = [
         22.46,
         "https://m.media-amazon.com/images/I/61hBb9nFtxS._AC_SX522_.jpg",
         "Razze piccole",
+        "3kg",
         "90cm x 55cm x 19cm"
     ),
 
@@ -102,6 +106,7 @@ $kennels = [
         57.99,
         "https://m.media-amazon.com/images/I/714QScIqOfL.__AC_SX300_SY300_QL70_ML2_.jpg",
         "Razze di taglia grande",
+        "5kg",
         "89 x 63 x 17"
     )
 ];

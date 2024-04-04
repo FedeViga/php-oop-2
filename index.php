@@ -125,6 +125,9 @@ require './db.php';
                     <h5>
                         Misure: <?= $currentKennel->measures ?>
                     </h5>
+                    <h5>
+                        Peso: <?= $currentKennel->weight ?>
+                    </h5>
                 </div>
             </div>
             <?php

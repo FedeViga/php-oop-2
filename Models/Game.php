@@ -1,7 +1,8 @@
 <?php
-
 class Game extends Product{
-    public $animalSize;
+
+    use Sizeable;
+
     public $gameType;
     
     /**
