@@ -9,7 +9,13 @@ require './Models/Game.php';
 require './Models/Kennel.php';
 
 
-$foods = [
+$foods = [];
+$games = [];
+$kennels = [];
+
+$error = null;
+
+try {
     $product1 = new Food(
         new Category("Cane", "fa-dog"),
         "Alimento secco completo per cani adulti",
@@ -19,8 +25,13 @@ $foods = [
         "20Kg",
         "Agnello e Riso",
         1
-    ),
-    
+    );
+    array_push($foods, $product1);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+
+try {
     $product2 = new Food (
         new Category("Gatto", "fa-cat"),
         "Cibo per Gatti Sterilizzati con Salmoni",
@@ -30,8 +41,13 @@ $foods = [
         "3Kg",
         "Salmone",
         1
-    ),
-    
+    );
+    array_push($foods, $product2);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+
+try {
     $product3 = new Food (
         new Category("Gatto", "fa-cat"),
         "Purina Gourmet Gold Mousse",
@@ -41,10 +57,13 @@ $foods = [
         "85g",
         "Pollo",
         24
-    )
-];
+    );
+    array_push($foods, $product3);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
-$games = [
+try {
     $product4 = new Game (
         new Category("Cane", "fa-dog"),
         "Corda da Masticare Resistenti e Lavabili per La Pulizia dei Denti",
@@ -53,8 +72,13 @@ $games = [
         "https://m.media-amazon.com/images/I/81vKiYW4lmS._AC_SL1500_.jpg",
         "Picola o media taglia",
         "Giocattolo da masticare"
-    ),
-    
+    );
+    array_push($games, $product4);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+
+try {
     $product5 = new Game (
         new Category("Gatto", "fa-cat"),
         "Tiragraffi per Gatto Albero Tiragraffi",
@@ -63,8 +87,13 @@ $games = [
         "https://m.media-amazon.com/images/I/611vVt+xQxL._AC_SL1500_.jpg",
         "Tutte le taglie",
         "Vita in casa"
-    ),
+    );
+    array_push($games, $product5);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
+try {
     $product6 = new Game (
         new Category("Cane", "fa-dog"),
         "Gioco di intelligenza per cani - Gioco di strategia con attività per cani, flip board",
@@ -73,10 +102,13 @@ $games = [
         "https://m.media-amazon.com/images/I/613cp35wyiL._AC_SL1500_.jpg",
         "Tutte le taglie",
         "Rompicapo"
-    )
-];
+    );
+    array_push($games, $product6);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
-$kennels = [
+try {
     $product7 = new Kennel (
         new Category("Gatto", "fa-cat"),
         "Cuccia per gatti a ciambella, 40 cm, calmante, soffice peluche con fondo antiscivolo, cuscino lavabile, morbido e anti paura per gatti",
@@ -86,8 +118,13 @@ $kennels = [
         "Tutte le taglie",
         "2kg",
         "40cm"
-    ),
-    
+    );
+    array_push($kennels, $product7);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
+
+try {
     $product8 = new Kennel (
         new Category("Cane", "fa-dog"),
         "Amazon Basics Cane Lettino rialzato rinfrescante per animali domestici, stoffa",
@@ -97,8 +134,13 @@ $kennels = [
         "Razze piccole",
         "3kg",
         "90cm x 55cm x 19cm"
-    ),
+    );
+    array_push($kennels, $product8);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
+try {
     $product9 = new Kennel (
         new Category("Cane", "fa-dog"),
         "Bedsure Letto per Cani Grande 89x63x18cm - Divano per Cani Taglia Gande in Uovo Foam, Colore Grigio, Cuscino per Cani Sfoderabile e Lavabile",
@@ -108,5 +150,8 @@ $kennels = [
         "Razze di taglia grande",
         "5kg",
         "89 x 63 x 17"
-    )
-];
+    );
+    array_push($kennels, $product9);
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}

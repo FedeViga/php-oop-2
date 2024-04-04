@@ -28,8 +28,20 @@ require './db.php';
         PHP OOP 2
     </h1>
 
+
     <div class="container">
 
+    <?php 
+
+    if ($error) {
+        ?>
+        <div class="alert alert-warning" role="alert">
+            <?= $error ?>
+        </div>
+        <?php
+    }
+
+    ?>
         <!-- sezione cibi -->
         <section class="row py-3">
             <h2 class="text-center py-2">
